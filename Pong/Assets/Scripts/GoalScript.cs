@@ -1,0 +1,38 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class GoalScript : MonoBehaviour
+{
+    public Text scoreUI;
+
+    private int score = 0;
+    private Vector2 enemyDirection;
+    private GameScript gameScript;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        gameScript = GameObject.Find("GameManager").GetComponent<GameScript>();
+        enemyDirection = Vector2.right * (transform.position.x / Mathf.Abs(transform.position.x));
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        scoreUI.text = score.ToString();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ball"))
+        {
+            score++;
+            Destroy(collision.gameObject);
+
+            gameScript.SetForce(enemyDirection);
+
+        }
+    }
+}
