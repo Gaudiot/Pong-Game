@@ -10,14 +10,15 @@ public class GameScript : MonoBehaviour
     public GameObject pausePanel;
     public string menuScene;
 
-    private bool spawnBall = false;
-    private Vector2 force;
+    private bool spawnBall = true;
+    private float x, y;
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = false;
-        force = (Random.Range(0, 2) == 0) ? Vector2.left : Vector2.right;
+        x = (Random.Range(0, 2) == 0) ? 1 : -1;
+        y = (Random.Range(0, 2) == 0) ? 1 : -1;
     }
 
     // Update is called once per frame
@@ -35,10 +36,10 @@ public class GameScript : MonoBehaviour
             Time.timeScale = 1 - Time.timeScale;
         }
 
-        if (!spawnBall
+        if (spawnBall
             && GameObject.FindGameObjectWithTag("Ball") == null)
         {
-            spawnBall = true;
+            spawnBall = false;
             StartCoroutine(InstantiateBall());
         }
 
@@ -49,17 +50,11 @@ public class GameScript : MonoBehaviour
         yield return new WaitForSeconds(secondsBtwRounds);
 
         var newBall = Instantiate(ball);
+        spawnBall = true;
 
         yield return new WaitForEndOfFrame();
 
-        newBall.GetComponent<BallScript>().PushBall(force, 300);
-
-        spawnBall = false;
-    }
-
-    public void SetForce(Vector2 f)
-    {
-        force = f;
+        newBall.GetComponent<BallScript>().SetVelocity(x, y);
     }
 
     public void QuitGame()
@@ -67,5 +62,11 @@ public class GameScript : MonoBehaviour
         Time.timeScale = 1;
         Cursor.visible = true;
         SceneManager.LoadScene(menuScene);
+    }
+
+    public void SetVelocityPercentage(float newX, float newY)
+    {
+        x = newX;
+        y = newY;
     }
 }

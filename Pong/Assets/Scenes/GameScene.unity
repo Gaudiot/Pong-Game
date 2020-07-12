@@ -320,7 +320,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -349,7 +349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   up: 273
   down: 274
-  moveSpeed: 3
+  moveSpeed: 6
 --- !u!50 &606383423
 Rigidbody2D:
   serializedVersion: 4
@@ -558,7 +558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f52364df90c0140a8f4dd35b8f6dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsBtwRounds: 0.5
+  secondsBtwRounds: 2
   ball: {fileID: 8714337814766260989, guid: 67d246a9bb9cc3a44bb79e92cc15c96c, type: 3}
   pausePanel: {fileID: 1734300258}
   menuScene: MenuScene
@@ -884,8 +884,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086900901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.052, z: 0}
-  m_LocalScale: {x: 13.33, y: 0.1, z: 1}
+  m_LocalPosition: {x: 0, y: -5.15, z: 0}
+  m_LocalScale: {x: 13.33, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 760121510}
   m_RootOrder: 3
@@ -1243,7 +1243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   up: 119
   down: 115
-  moveSpeed: 3
+  moveSpeed: 6
 --- !u!61 &1291033101
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1255,7 +1255,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -1515,8 +1515,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031507671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.07, z: 0}
-  m_LocalScale: {x: 13.33, y: 0.1, z: 1}
+  m_LocalPosition: {x: 0, y: 5.22, z: 0}
+  m_LocalScale: {x: 13.33, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 760121510}
   m_RootOrder: 1
