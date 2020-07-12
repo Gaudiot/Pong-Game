@@ -6,7 +6,6 @@ public class BallScript : MonoBehaviour
 {
     public float maxVelocityY;
 
-    private float randomY;
     private Rigidbody2D ballRb;
     private Vector3 velocity;
 
@@ -32,7 +31,7 @@ public class BallScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            randomY = Random.Range(maxVelocityY, -maxVelocityY);
+            var randomY = Random.Range(maxVelocityY, -maxVelocityY);
             SetVelocity(-1, randomY);
         }
         else
@@ -41,9 +40,9 @@ public class BallScript : MonoBehaviour
         }
     }
 
-    public void SetVelocity(float x, float y)
+    public void SetVelocity(float direction, float velocityY)
     {
-        velocity.x *= x;
-        velocity.y = y;
+        velocity.x *= direction;
+        velocity.y = velocityY;
     }
 }

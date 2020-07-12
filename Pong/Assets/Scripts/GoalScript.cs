@@ -8,14 +8,14 @@ public class GoalScript : MonoBehaviour
     public Text scoreUI;
 
     private int score = 0;
-    private float enemyDirection;
-    private GameScript gameScript;
+    private float opponentDirection;
+    private BallSpawnScript ballSpawnScript;
 
     // Start is called before the first frame update
     void Start()
     {
-        gameScript = GameObject.Find("GameManager").GetComponent<GameScript>();
-        enemyDirection = (transform.position.x / Mathf.Abs(transform.position.x));
+        ballSpawnScript = GameObject.Find("BallSpawner").GetComponent<BallSpawnScript>();
+        opponentDirection = (transform.position.x / Mathf.Abs(transform.position.x));
     }
 
     // Update is called once per frame
@@ -31,8 +31,7 @@ public class GoalScript : MonoBehaviour
             score++;
             Destroy(collision.gameObject);
 
-            gameScript.SetVelocityPercentage(enemyDirection, -1);
-
+            ballSpawnScript.SetBallDirection(opponentDirection, 0);
         }
     }
 }
