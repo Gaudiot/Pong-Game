@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class BallScript : MonoBehaviour
 
     private Rigidbody2D ballRb;
     private Vector3 velocity;
+    private float centerDirection;
 
     // Start is called before the first frame update
     void Start()
@@ -29,14 +31,18 @@ public class BallScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        centerDirection = -transform.position.y / Mathf.Abs(transform.position.y);
+
         if (collision.CompareTag("Player"))
         {
-            var randomY = Random.Range(maxVelocityY, -maxVelocityY);
+            SoundScript.PlaySound("hitSound");
+            var randomY = UnityEngine.Random.Range(maxVelocityY, -maxVelocityY);
             SetVelocity(-1, randomY);
         }
         else
         {
-            SetVelocity(1, -velocity.y);
+            SoundScript.PlaySound("hitSound");
+            SetVelocity(1, Mathf.Abs(velocity.y)*(centerDirection));
         }
     }
 
