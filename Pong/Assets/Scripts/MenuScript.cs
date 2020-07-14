@@ -7,18 +7,7 @@ public class MenuScript : MonoBehaviour
 {
 
     public string gameScene;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string configScene;
 
     public void StartGame()
     {
@@ -35,5 +24,10 @@ public class MenuScript : MonoBehaviour
         {
             Application.Quit();
         }
+    }
+
+    public void GoToConfigs()
+    {
+        SceneManager.LoadScene(configScene);
     }
 }
