@@ -5,7 +5,7 @@ using UnityEngine;
 public class BallSpawnScript : MonoBehaviour
 {
     public GameObject ball;
-    public float timeBetweenRounds = 3;
+    public float timeBetweenRounds;
     public Transform[] spawnPoints;
 
     private float directionX;
@@ -15,7 +15,10 @@ public class BallSpawnScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //will choose randomly to which direction the first ball should go;
         directionX = (Random.Range(0, 2) == 0) ? 1 : -1;
+
+        timeBetweenRounds = PlayerPrefs.GetInt("TimeBetweenRounds", 3);
     }
 
     // Update is called once per frame
