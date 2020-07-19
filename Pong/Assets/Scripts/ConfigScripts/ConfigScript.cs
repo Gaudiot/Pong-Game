@@ -5,27 +5,24 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using System;
-using UnityEngine.UIElements;
 
 public class ConfigScript : MonoBehaviour
 {
     public string menuScene;
     public AudioMixer audioMixer;
     public Text ballRespawnTimeText;
+    public Slider musicSlider;
 
     private void Start()
     {
         ballRespawnTimeText.text = PlayerPrefs.GetInt("TimeBetweenRounds", 3).ToString();
+        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1);
+
     }
 
     public void GoToTitle()
     {
         SceneManager.LoadScene(menuScene);
-    }
-
-    public void SetVolume(float volume)
-    {
-        audioMixer.SetFloat("masterVolume", volume);
     }
 
     public void IncreaseTimeBtwRounds()
@@ -50,5 +47,10 @@ public class ConfigScript : MonoBehaviour
             PlayerPrefs.SetInt("TimeBetweenRounds", newTime);
             ballRespawnTimeText.text = newTime.ToString();
         }
+    }
+
+    public void ChangeMusicVolume(float newVolume)
+    {
+        PlayerPrefs.SetFloat("MusicVolume", newVolume);
     }
 }

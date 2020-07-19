@@ -28,3 +28,9 @@ The score goal is agreed between both player before the start of the game.
 While in game you can:
 * Press the 'R' key to restart the match.
 * Press the 'Esc' key to pause the match.
+
+## Credits
+
+Music:  
+"Fix The Gear" by Oscar Owl  
+Source: https://soundcloud.com/oscar-rodriguez-flores/fix-the-gearwav

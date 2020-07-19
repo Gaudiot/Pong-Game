@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 572529460}
   - component: {fileID: 572529459}
   m_Layer: 5
-  m_Name: masterVolumeText
+  m_Name: MusicVolumeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -766,7 +766,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Master Volume
+  m_Text: Music Volume
 --- !u!222 &572529460
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1326,7 +1326,7 @@ GameObject:
   - component: {fileID: 1592967066}
   - component: {fileID: 1592967067}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: MusicVolumeSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1397,15 +1397,15 @@ MonoBehaviour:
   m_FillRect: {fileID: 1836388816}
   m_HandleRect: {fileID: 5183585}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_MinValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2044380660}
-        m_MethodName: SetVolume
+        m_MethodName: ChangeMusicVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1651,6 +1651,7 @@ MonoBehaviour:
   menuScene: MenuScene
   audioMixer: {fileID: 24100000, guid: e4bad498ecd5eed4ebd44cad361aa722, type: 2}
   ballRespawnTimeText: {fileID: 238412866}
+  musicSlider: {fileID: 1592967067}
 --- !u!4 &2044380661
 Transform:
   m_ObjectHideFlags: 0
