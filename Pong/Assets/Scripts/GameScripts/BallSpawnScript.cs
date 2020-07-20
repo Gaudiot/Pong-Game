@@ -7,6 +7,7 @@ public class BallSpawnScript : MonoBehaviour
     public GameObject ball;
     public float timeBetweenRounds;
     public Transform[] spawnPoints;
+    public PlayerScript playerScript;
 
     private float directionX;
     private float velocityY;
@@ -27,6 +28,7 @@ public class BallSpawnScript : MonoBehaviour
         if (spawnBall
             && GameObject.FindGameObjectWithTag("Ball") == null)
         {
+            playerScript.setBallInScene(false);
             spawnBall = false;
             StartCoroutine(InstantiateBall());
         }
@@ -42,6 +44,7 @@ public class BallSpawnScript : MonoBehaviour
 
         yield return new WaitForEndOfFrame();
 
+        playerScript.setBallInScene(true);
         newBall.GetComponent<BallScript>().SetVelocity(directionX, velocityY);
     }
 
