@@ -4,7 +4,7 @@ Pong-Game is a electronic game build onto [unity](https://unity.com/pt)'s engine
 
 ## Releases
 
-* comming soon
+* [version 1.2.0](https://drive.google.com/drive/folders/14IUOg66vYOxh9i_F0zcTdTuXE0ppCrOX?usp=sharing)
 
 ## Objective
 The main purpose of the game, like many others, is to score more points than your opponent.
