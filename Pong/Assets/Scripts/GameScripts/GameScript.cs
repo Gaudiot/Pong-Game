@@ -15,7 +15,7 @@ public class GameScript : MonoBehaviour
     {
         Cursor.visible = false;
 
-        leftPlayerScript.isBot = GlobalData.VersusAI;
+        leftPlayerScript.SetIsBot(GlobalData.VersusAI);
     }
 
     // Update is called once per frame

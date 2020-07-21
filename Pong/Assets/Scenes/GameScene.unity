@@ -615,7 +615,7 @@ MonoBehaviour:
   - {fileID: 950043663}
   - {fileID: 911100741}
   - {fileID: 2082739564}
-  playerScript: {fileID: 1291033100}
+  leftPlayerScript: {fileID: 1291033100}
 --- !u!4 &723485976
 Transform:
   m_ObjectHideFlags: 0
@@ -1565,7 +1565,7 @@ MonoBehaviour:
   up: 119
   down: 115
   moveSpeed: 6
-  isBot: 1
+  isBot: 0
 --- !u!61 &1291033101
 BoxCollider2D:
   m_ObjectHideFlags: 0

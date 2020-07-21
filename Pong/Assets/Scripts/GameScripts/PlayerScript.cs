@@ -6,8 +6,8 @@ public class PlayerScript : MonoBehaviour
 {
     public KeyCode up, down;
     public float moveSpeed = 1;
-    public bool isBot = false;
 
+    private bool isBot = false;
     private bool ballInScene = false;
     private Rigidbody2D playerRb;
     private Vector3 direction;
@@ -78,5 +78,10 @@ public class PlayerScript : MonoBehaviour
     public void SetBallInScene(bool isBallInScene)
     {
         ballInScene = isBallInScene;
+    }
+
+    public void SetIsBot(bool willBeBot)
+    {
+        isBot = willBeBot;
     }
 }
