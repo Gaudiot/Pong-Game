@@ -9,8 +9,24 @@ public class MenuScript : MonoBehaviour
     public string gameScene;
     public string configScene;
 
+    public GameObject mainPanel;
+    public GameObject gameSelectPanel;
+
     public void StartGame()
     {
+        mainPanel.SetActive(false);
+        gameSelectPanel.SetActive(true);
+    }
+
+    public void BackToMainPanel()
+    {
+        mainPanel.SetActive(true);
+        gameSelectPanel.SetActive(false);
+    }
+
+    public void LoadGame(bool againstAI)
+    {
+        GlobalData.VersusAI = againstAI;
         SceneManager.LoadScene(gameScene);
     }
 
@@ -26,7 +42,7 @@ public class MenuScript : MonoBehaviour
         }
     }
 
-    public void GoToConfigs()
+    public void GoToSettings()
     {
         SceneManager.LoadScene(configScene);
     }

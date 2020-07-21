@@ -75,7 +75,7 @@ public class PlayerScript : MonoBehaviour
         playerRb.MovePosition(transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 
-    public void setBallInScene(bool isBallInScene)
+    public void SetBallInScene(bool isBallInScene)
     {
         ballInScene = isBallInScene;
     }

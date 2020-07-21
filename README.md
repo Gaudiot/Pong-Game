@@ -5,6 +5,12 @@ Pong-Game is a electronic game build onto [unity](https://unity.com/pt)'s engine
 ## Releases
 
 * [version 1.2.0](https://drive.google.com/drive/folders/14IUOg66vYOxh9i_F0zcTdTuXE0ppCrOX?usp=sharing)
+* [version 1.2.2](https://drive.google.com/drive/folders/1hPTvXUrxr5db2h-KRRNB7aG9cdh3fmEh?usp=sharing)
+
+### How to execute the game
+Choose an option from the list above and download the zip file.  
+Extract the content from the zip and open it. Then click on the Pong.exe to execute the game.  
+Enjoy and have fun!
 
 ## Objective
 The main purpose of the game, like many others, is to score more points than your opponent.
@@ -14,9 +20,10 @@ To score a point you need to make the ball go past your opponent and enter their
 
 Pong-Game is a 2-Player game that the players are only allowed to move vertically.
 
-The left player can move up and down using the 'W' and 'S' keys, respectively.
-
+The left player can move up and down using the 'W' and 'S' keys, respectively.  
 The right player can move up and down using the 'UpArrow' and 'DownArrow' keys, respectively.
+
+If you choose to play against the AI be aware that you'll be the right player.
 
 ## Who wins?
 

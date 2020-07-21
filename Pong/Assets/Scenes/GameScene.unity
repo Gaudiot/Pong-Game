@@ -351,7 +351,6 @@ MonoBehaviour:
   down: 274
   moveSpeed: 6
   isBot: 0
-  ballInScene: 0
 --- !u!50 &606383423
 Rigidbody2D:
   serializedVersion: 4
@@ -562,6 +561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 1734300258}
   menuScene: MenuScene
+  leftPlayerScript: {fileID: 1291033100}
 --- !u!4 &688509262
 Transform:
   m_ObjectHideFlags: 0
@@ -1566,7 +1566,6 @@ MonoBehaviour:
   down: 115
   moveSpeed: 6
   isBot: 1
-  ballInScene: 0
 --- !u!61 &1291033101
 BoxCollider2D:
   m_ObjectHideFlags: 0

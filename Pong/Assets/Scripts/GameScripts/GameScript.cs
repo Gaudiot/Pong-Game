@@ -8,10 +8,14 @@ public class GameScript : MonoBehaviour
     public GameObject pausePanel;
     public string menuScene;
 
+    public PlayerScript leftPlayerScript;
+
     // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = false;
+
+        leftPlayerScript.isBot = GlobalData.VersusAI;
     }
 
     // Update is called once per frame
