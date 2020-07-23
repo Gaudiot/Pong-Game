@@ -4,13 +4,13 @@ Pong-Game is a electronic game build onto [unity](https://unity.com/pt)'s engine
 
 ## Releases
 
-* [version 1.2.0](https://drive.google.com/drive/folders/14IUOg66vYOxh9i_F0zcTdTuXE0ppCrOX?usp=sharing)
-* [version 1.2.2](https://drive.google.com/drive/folders/1hPTvXUrxr5db2h-KRRNB7aG9cdh3fmEh?usp=sharing)
-* [version 1.2.3](https://drive.google.com/drive/folders/18PJ48iYPwCSFBhq4W4dy21OWLdB7nhZL?usp=sharing)
+* [version 1.2.0](https://drive.google.com/drive/folders/14IUOg66vYOxh9i_F0zcTdTuXE0ppCrOX?usp=sharing) [windows]
+* [version 1.2.2](https://drive.google.com/drive/folders/1hPTvXUrxr5db2h-KRRNB7aG9cdh3fmEh?usp=sharing) [windows]
+* [version 1.2.3](https://drive.google.com/drive/folders/18PJ48iYPwCSFBhq4W4dy21OWLdB7nhZL?usp=sharing) [windows, mac]
 
 ### How to execute the game
 Choose an option from the above list, you shall be lead to a google drive page.  
-Download to your computer the zip file.  
+Download to your computer the zip file which fits your system.  
 Extract the content from the zip and open the folder inside it. Then click on the Pong.exe to execute the game.  
 Enjoy and have fun!
 
